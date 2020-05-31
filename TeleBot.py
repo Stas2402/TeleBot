@@ -2,22 +2,16 @@ import telebot
 import requests
 
 bot = telebot.TeleBot('1012392887:AAHoiinJ809WkYfhC3gMzsBmEXcS2Lrypss')
+
 foods = set(['еда', "продукты", "жратва", 'хлеб', 'атб', 'варус', 'сильпо', 'магазин'])
 alcohols = set(['пиво', 'вино', 'бухло', 'пивас', 'алкоголь', 'выпивка', 'сидр', 'ром'])
 coffees = set(['кофе', 'чай'])
-public_serv = set(['комуналка', 'свет', 'вода', 'газ', 'отопление', 'коммунальные услуги', 'жилье'])
+public_serv = set(['комуналка', 'свет', 'вода', 'газ', 'отопление', 'коммунальные услуги', 'жилье', 'газ'])
 transports = set(['трамвай', 'проезд', 'дорога', 'маршрутка'])
 creditss = set(['кредит', 'долг'])
 trips = set(['путешествие', 'поездка', 'отпуск'])
-
-
-food = 0
-alcohol = 0
-coffee = 0
-public_services = 0
-transport = 0
-credit = 0
-trip = 0
+others = set(['другое', 'еще'])
+food, alcohol, coffee, public_services, transport, credit, trip, other = 0, 0, 0, 0, 0, 0, 0, 0
 budget = {
     'food': food,
     'alcohol': alcohol,
@@ -26,6 +20,7 @@ budget = {
     'transport': transport,
     'credit': credit,
     'trip': trip,
+    'other': other,
 }
 
 @bot.message_handler(commands=['start'])
@@ -52,14 +47,14 @@ def categories_message(message):
 @bot.message_handler(content_types=['text'])
 def added(message):
     what = message.text.split(' ')
-    if len(what) <= 2:
-        value = 0
-        str = 0
-        Fail = False
+    value = 0
+    str = 0
+    Fail = False
+    if len(what) == 2:
         for k in what:
-            if k.isdigit():
+            try:
                 value = int(k)
-            else:
+            except:
                 str = k.lower()
         if str in foods:
             budget['food'] += value
@@ -75,16 +70,33 @@ def added(message):
             budget['credit'] += value
         elif str in trips:
             budget['trip'] += value
+        elif str in others:
+            budget['other'] += value
         else:
             bot.send_message(message.chat.id, 'Не найдено похожей категории. Попробуй еще раз.')
             Fail = True
         if Fail == False:
-            bot.send_message(message.chat.id, 'Окей, {} грн потрачено на {}'.format(value, str))
+            if value > 0:
+                bot.send_message(message.chat.id, 'Окей, {} грн потрачено на {}'.format(value, str))
+            else:
+                bot.send_message(message.chat.id, 'Окей, {} грн вычли из {}'.format(value, str))
+    else:
+        bot.send_message(message.chat.id, "Неверный формат. Используй, например, 'газ 500'")
 
 
-
-    print(message.text)
+    print(str)
+    print(value)
     print(budget)
+
+@bot.message_handler(commands=['previos'])
+def previos(message):
+    bot.send_message(message.chat.id, 'Нет данных о предидущем месяце')
+
+
+
+
+
+
 
 
 bot.polling()

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12d18a41-bb20-4909-82ba-69581c002a75" name="Default Changelist" comment="" />
+    <list default="true" id="12d18a41-bb20-4909-82ba-69581c002a75" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeleBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/TeleBot.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +18,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1cPQpo6OnA7rxveJBwRoWvHaqgG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,6 +29,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
   </component>
   <component name="RunManager">
@@ -60,21 +68,21 @@
       <screen x="0" y="32" width="1366" height="736" />
     </state>
     <state x="366" y="127" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.32.1366.736@0.32.1366.736" timestamp="1590691278164" />
-    <state width="1343" height="183" key="GridCell.Tab.0.bottom" timestamp="1590829705832">
+    <state width="1343" height="183" key="GridCell.Tab.0.bottom" timestamp="1590923958176">
       <screen x="0" y="32" width="1366" height="736" />
     </state>
-    <state width="1343" height="183" key="GridCell.Tab.0.bottom/0.32.1366.736@0.32.1366.736" timestamp="1590829705832" />
-    <state width="1343" height="183" key="GridCell.Tab.0.center" timestamp="1590829705831">
+    <state width="1343" height="183" key="GridCell.Tab.0.bottom/0.32.1366.736@0.32.1366.736" timestamp="1590923958176" />
+    <state width="1343" height="183" key="GridCell.Tab.0.center" timestamp="1590923958175">
       <screen x="0" y="32" width="1366" height="736" />
     </state>
-    <state width="1343" height="183" key="GridCell.Tab.0.center/0.32.1366.736@0.32.1366.736" timestamp="1590829705831" />
-    <state width="1343" height="183" key="GridCell.Tab.0.left" timestamp="1590829705830">
+    <state width="1343" height="183" key="GridCell.Tab.0.center/0.32.1366.736@0.32.1366.736" timestamp="1590923958175" />
+    <state width="1343" height="183" key="GridCell.Tab.0.left" timestamp="1590923958175">
       <screen x="0" y="32" width="1366" height="736" />
     </state>
-    <state width="1343" height="183" key="GridCell.Tab.0.left/0.32.1366.736@0.32.1366.736" timestamp="1590829705830" />
-    <state width="1343" height="183" key="GridCell.Tab.0.right" timestamp="1590829705832">
+    <state width="1343" height="183" key="GridCell.Tab.0.left/0.32.1366.736@0.32.1366.736" timestamp="1590923958175" />
+    <state width="1343" height="183" key="GridCell.Tab.0.right" timestamp="1590923958176">
       <screen x="0" y="32" width="1366" height="736" />
     </state>
-    <state width="1343" height="183" key="GridCell.Tab.0.right/0.32.1366.736@0.32.1366.736" timestamp="1590829705832" />
+    <state width="1343" height="183" key="GridCell.Tab.0.right/0.32.1366.736@0.32.1366.736" timestamp="1590923958176" />
   </component>
 </project>
